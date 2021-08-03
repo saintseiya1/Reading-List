@@ -7,10 +7,10 @@
 	<h3>Setting up...</h3>
 
 <?php
-	$dbhost = 'localhost';
-	$dbname = 'read_list';
-	$dbuser = 'root';
-	$dbpass = 'root';
+	$dbhost = 'xyz';
+	$dbname = 'xyz';
+	$dbuser = 'xyz';
+	$dbpass = 'xyz';
 
 	$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
