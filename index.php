@@ -1,5 +1,8 @@
 <?php 
 
+// This sets up the table in the database: 
+// require_once 'setup.php';
+
 echo <<<_END
 <h1>My Reading List</h1>
 
@@ -11,3 +14,4 @@ echo <<<_END
 	<input type="submit" value="ADD RECORD">
 	</pre></form>
 _END;
+
