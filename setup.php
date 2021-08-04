@@ -7,10 +7,10 @@
 	<h3>Setting up...</h3>
 
 <?php
-	$dbhost = 'xyz';
-	$dbname = 'xyz';
-	$dbuser = 'xyz';
-	$dbpass = 'xyz';
+	$dbhost = 'x';
+	$dbname = 'x';
+	$dbuser = 'x';
+	$dbpass = 'x';
 
 	$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
