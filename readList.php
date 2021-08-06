@@ -6,10 +6,52 @@
 	$dbpass = 'x';
 
 	$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
+	if ($connection->connect_error) die ($connection->connect_error);
 
-function get_post($connection, $var) {
-	return $connection->real_escape_string($_POST[$var]);
+/*
+if (isset($_POST['delete']) && isset($_POST['id']))
+{
+	$id = get_post($connection, 'id');
+	$query = "DELETE FROM list WHERE id='$id'";
+	$result = $connection->query($query);
+	if (!$result) echo "DELETE failed: $query<br>" .
+		$connection->error . "<br><br>";
 }
+
+*/
+
+/*
+if (isset($_POST['reset'])) {
+	$query = "DROP TABLE IF EXISTS list";
+	$connection->query($query);
+
+	$newquery = 
+		"CREATE TABLE list (
+		id SMALLINT NOT NULL AUTO_INCREMENT,
+		title VARCHAR(32) NOT NULL,
+		author VARCHAR(32) NOT NULL,
+		year SMALLINT NOT NULL,
+		isbn CHAR(13),
+		PRIMARY KEY(id)
+	)";
+	$result = $connection->query($newquery);
+	if (!$result) die ("Database access failed: " . $connection->error);
+	if ($result) echo "success!";
+	$_POST['reset'] = null;
+
+
+	<form action="read.php" method="post">
+	<input type="hidden" name="reset" value="yes">
+	<input type="submit" value="RESET"></form>
+	</pre></form>
+
+	<form action="read.php" method="post">
+<input type="hidden" name="delete" value="yes">
+<input type="hidden" name="id" value="$row[0]">
+<input type="submit" value="DELETE RECORD"></form>
+
+}
+*/
 
 if (isset($_POST['id']) &&
 	isset($_POST['title']) &&
@@ -29,6 +71,7 @@ if (isset($_POST['id']) &&
 			$connection->error . "<br><br>";
 	}
 
+
 echo <<<_END
 <h3>My Reading List</h3>
 
@@ -39,7 +82,6 @@ echo <<<_END
 	Year <input type="text" name="year">
 	ISBN <input type="text" name="isbn">
 	<input type="submit" value="ADD RECORD">
-	</pre></form>
 _END;
 
 $query = "SELECT * FROM list";
@@ -53,7 +95,7 @@ for ($j = 0; $j < $rows; ++$j)
 	$result->data_seek($j);
 	$row = $result->fetch_array(MYSQLI_NUM);
 
-	echo <<<_NEW
+	echo <<<_END
 <pre>
 <hr />
 	Id $row[0];
@@ -62,10 +104,15 @@ for ($j = 0; $j < $rows; ++$j)
 	Year $row[3];
 	ISBN $row[4];
 </pre>
-_NEW;
+
+_END;
 }
 
 $result->close();
 $connection->close();
+
+function get_post($connection, $var) {
+	return $connection->real_escape_string($_POST[$var]);
+}
 
 ?>
