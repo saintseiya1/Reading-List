@@ -67,10 +67,29 @@ if (isset($_POST['id']) &&
 
 		$myquery = "INSERT INTO list VALUES" ."('$id', '$title', '$author', '$year', '$isbn')";
 		$myresult = $connection->query($myquery);
-		if (!$myresult) echo "INSERT failed: $myquery<br>" . 
-			$connection->error . "<br><br>";
+		if (!$myresult) {
+			$insertFailed = "INSERT failed: $myquery" . "\n" . $connection->error;
+			insertFail($insertFailed);
+		}
 	}
 
+echo "
+	<style>
+		body {
+		background: lightgray;}
+		table, th, td {
+			border: 1px solid blue;
+			border-collapse: collapse;
+		}
+		th, td {
+		  padding: 5px;
+		}
+	</style>
+";
+
+function insertFail($insfail) {
+	echo "<script>alert(`$insfail\n`);</script>";
+};
 
 echo <<<_END
 <h3>My Reading List</h3>
@@ -96,17 +115,20 @@ for ($j = 0; $j < $rows; ++$j)
 	$row = $result->fetch_array(MYSQLI_NUM);
 
 	echo <<<_END
-<pre>
-<hr />
+<table>
+<tr><td>ID</td><td>Title</td><td>Author</td><td>Year</td><td>ISBN</td></tr>
+<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td><td>$row[4]</td></tr>
+</table>
+_END;
+}
+
+/*
 	Id $row[0];
 	Title $row[1];
 	Author $row[2];
 	Year $row[3];
 	ISBN $row[4];
-</pre>
-
-_END;
-}
+*/
 
 $result->close();
 $connection->close();
