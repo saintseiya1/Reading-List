@@ -8,7 +8,7 @@
 	$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 	if ($connection->connect_error) die ($connection->connect_error);
 
-/*
+
 if (isset($_POST['delete']) && isset($_POST['id']))
 {
 	$id = get_post($connection, 'id');
@@ -17,7 +17,7 @@ if (isset($_POST['delete']) && isset($_POST['id']))
 	if (!$result) echo "DELETE failed: $query<br>" .
 		$connection->error . "<br><br>";
 }
-
+/*
 */
 
 /*
@@ -101,6 +101,7 @@ echo <<<_END
 	Year <input type="text" name="year">
 	ISBN <input type="text" name="isbn">
 	<input type="submit" value="ADD RECORD">
+	</pre></form>
 _END;
 
 $query = "SELECT * FROM list";
@@ -119,6 +120,10 @@ for ($j = 0; $j < $rows; ++$j)
 <tr><td>ID</td><td>Title</td><td>Author</td><td>Year</td><td>ISBN</td></tr>
 <tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td><td>$row[4]</td></tr>
 </table>
+	<form action="read.php" method="post">
+<input type="hidden" name="delete" value="yes">
+<input type="hidden" name="id" value="$row[0]">
+<input type="submit" value="DELETE RECORD"></form>
 _END;
 }
 
