@@ -76,7 +76,8 @@ if (isset($_POST['id']) &&
 echo "
 	<style>
 		body {
-		background: lightgray;}
+			background: lightgray;
+		}
 		table, th, td {
 			border: 1px solid blue;
 			border-collapse: collapse;
@@ -91,18 +92,21 @@ function insertFail($insfail) {
 	echo "<script>alert(`$insfail\n`);</script>";
 };
 
+///////////////////////////////////////////////////////
 echo <<<_END
-<h3>My Reading List</h3>
 
-<form action="read.php" method="post"><pre>
+<form class="readForm" action="read.php" method="post"><pre>
+	<h3>My Reading List</h3>
 	Id <input type="text" name="id">
 	Title <input type="text" name="title">
 	Author <input type="text" name="author">
 	Year <input type="text" name="year">
 	ISBN <input type="text" name="isbn">
-	<input type="submit" value="ADD RECORD">
-	</pre></form>
+	<input type="submit" value="ADD RECORD"></pre>
+</form>
+
 _END;
+/////////////////////////////////////////////////////////////
 
 $query = "SELECT * FROM list";
 $result = $connection->query($query);
@@ -115,7 +119,9 @@ for ($j = 0; $j < $rows; ++$j)
 	$result->data_seek($j);
 	$row = $result->fetch_array(MYSQLI_NUM);
 
-	echo <<<_END
+////////////////////////////////////////////////////////////////
+echo <<<_END
+
 <table>
 <tr><td>ID</td><td>Title</td><td>Author</td><td>Year</td><td>ISBN</td></tr>
 <tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td><td>$row[4]</td></tr>
@@ -124,7 +130,9 @@ for ($j = 0; $j < $rows; ++$j)
 <input type="hidden" name="delete" value="yes">
 <input type="hidden" name="id" value="$row[0]">
 <input type="submit" value="DELETE RECORD"></form>
+
 _END;
+///////////////////////////////////////////////////////////////
 }
 
 /*
