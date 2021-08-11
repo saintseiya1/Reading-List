@@ -1,9 +1,9 @@
 <?php
 
-	$dbhost = 'x';
-	$dbname = 'x';
-	$dbuser = 'x';
-	$dbpass = 'x';
+	$dbhost = 'localhost';
+	$dbname = 'read_list';
+	$dbuser = 'root';
+	$dbpass = 'root';
 
 	$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 	if ($connection->connect_error) die ($connection->connect_error);
@@ -17,41 +17,7 @@ if (isset($_POST['delete']) && isset($_POST['id']))
 	if (!$result) echo "DELETE failed: $query<br>" .
 		$connection->error . "<br><br>";
 }
-/*
-*/
 
-/*
-if (isset($_POST['reset'])) {
-	$query = "DROP TABLE IF EXISTS list";
-	$connection->query($query);
-
-	$newquery = 
-		"CREATE TABLE list (
-		id SMALLINT NOT NULL AUTO_INCREMENT,
-		title VARCHAR(32) NOT NULL,
-		author VARCHAR(32) NOT NULL,
-		year SMALLINT NOT NULL,
-		isbn CHAR(13),
-		PRIMARY KEY(id)
-	)";
-	$result = $connection->query($newquery);
-	if (!$result) die ("Database access failed: " . $connection->error);
-	if ($result) echo "success!";
-	$_POST['reset'] = null;
-
-
-	<form action="read.php" method="post">
-	<input type="hidden" name="reset" value="yes">
-	<input type="submit" value="RESET"></form>
-	</pre></form>
-
-	<form action="read.php" method="post">
-<input type="hidden" name="delete" value="yes">
-<input type="hidden" name="id" value="$row[0]">
-<input type="submit" value="DELETE RECORD"></form>
-
-}
-*/
 
 if (isset($_POST['id']) &&
 	isset($_POST['title']) &&
@@ -92,7 +58,9 @@ function insertFail($insfail) {
 	echo "<script>alert(`$insfail\n`);</script>";
 };
 
-///////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////
 echo <<<_END
 
 <form class="readForm" action="read.php" method="post"><pre>
@@ -106,7 +74,9 @@ echo <<<_END
 </form>
 
 _END;
-/////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+
+
 
 $query = "SELECT * FROM list";
 $result = $connection->query($query);
@@ -119,7 +89,9 @@ for ($j = 0; $j < $rows; ++$j)
 	$result->data_seek($j);
 	$row = $result->fetch_array(MYSQLI_NUM);
 
-////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
 echo <<<_END
 
 <table>
@@ -132,7 +104,9 @@ echo <<<_END
 <input type="submit" value="DELETE RECORD"></form>
 
 _END;
-///////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
 }
 
 /*
