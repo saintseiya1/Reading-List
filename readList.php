@@ -1,9 +1,9 @@
 <?php
 
-	$dbhost = 'localhost';
-	$dbname = 'read_list';
-	$dbuser = 'root';
-	$dbpass = 'root';
+	$dbhost = 'x';
+	$dbname = 'x';
+	$dbuser = 'x';
+	$dbpass = 'x';
 
 	$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 	if ($connection->connect_error) die ($connection->connect_error);
@@ -42,10 +42,11 @@ if (isset($_POST['id']) &&
 echo "
 	<style>
 		body {
-			background: lightgray;
+			background: linear-gradient(seagreen, lightgreen, lightblue);
+
 		}
 		table, th, td {
-			border: 1px solid blue;
+			border: 2px solid gold;
 			border-collapse: collapse;
 		}
 		th, td {
