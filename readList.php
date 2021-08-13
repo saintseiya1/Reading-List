@@ -42,7 +42,7 @@ if (isset($_POST['id']) &&
 echo "
 	<style>
 		body {
-			background: linear-gradient(seagreen, lightgreen, lightblue);
+			background: linear-gradient(lightblue, dodgerblue, blue);
 
 		}
 		table, th, td {
@@ -51,6 +51,12 @@ echo "
 		}
 		th, td {
 		  padding: 5px;
+		}
+		.add {
+			background: green;
+		}
+		.delete {
+			background: red;
 		}
 	</style>
 ";
@@ -71,7 +77,7 @@ echo <<<_END
 	Author <input type="text" name="author">
 	Year <input type="text" name="year">
 	ISBN <input type="text" name="isbn">
-	<input type="submit" value="ADD RECORD"></pre>
+	<input type="submit" class="add" value="ADD RECORD"></pre>
 </form>
 
 _END;
@@ -102,7 +108,7 @@ echo <<<_END
 	<form action="read.php" method="post">
 <input type="hidden" name="delete" value="yes">
 <input type="hidden" name="id" value="$row[0]">
-<input type="submit" value="DELETE RECORD"></form>
+<input type="submit" class="delete" value="DELETE RECORD"></form>
 
 _END;
 /////////////////////////////////////////////////////////////////////////////////////////
