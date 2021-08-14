@@ -43,7 +43,7 @@ echo "
 	<style>
 		body {
 			background: linear-gradient(lightblue, dodgerblue, blue);
-
+			color: white;
 		}
 		table, th, td {
 			border: 2px solid gold;
