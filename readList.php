@@ -39,27 +39,7 @@ if (isset($_POST['id']) &&
 		}
 	}
 
-echo "
-	<style>
-		body {
-			background: linear-gradient(lightblue, dodgerblue, blue);
-			color: white;
-		}
-		table, th, td {
-			border: 2px solid gold;
-			border-collapse: collapse;
-		}
-		th, td {
-		  padding: 5px;
-		}
-		.add {
-			background: green;
-		}
-		.delete {
-			background: red;
-		}
-	</style>
-";
+echo '<link rel="stylesheet" href="readList.css" /> ';
 
 function insertFail($insfail) {
 	echo "<script>alert(`$insfail\n`);</script>";

@@ -1,0 +1,19 @@
+	<style>
+		body {
+			background: linear-gradient(lightblue, dodgerblue, blue);
+			color: white;
+		}
+		table, th, td {
+			border: 2px solid gold;
+			border-collapse: collapse;
+		}
+		th, td {
+		  padding: 5px;
+		}
+		.add {
+			background: blue;
+		}
+		.delete {
+			background: purple;
+		}
+	</style>
