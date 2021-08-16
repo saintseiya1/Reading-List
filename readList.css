@@ -1,6 +1,12 @@
 	<style>
-		body {
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		html {
 			background: linear-gradient(lightblue, dodgerblue, blue);
+			background-repeat: no-repeat;
 			color: white;
 		}
 		table, th, td {
@@ -11,9 +17,14 @@
 		  padding: 5px;
 		}
 		.add {
-			background: blue;
+			background: green;
+			color: white;
 		}
 		.delete {
-			background: purple;
+			background: red;
+			color: white;
+		}
+		input {
+			cursor: pointer;
 		}
 	</style>

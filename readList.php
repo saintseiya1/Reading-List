@@ -39,7 +39,7 @@ if (isset($_POST['id']) &&
 		}
 	}
 
-echo '<link rel="stylesheet" href="readList.css" /> ';
+echo '<link rel="stylesheet" href="read.css" /> ';
 
 function insertFail($insfail) {
 	echo "<script>alert(`$insfail\n`);</script>";
@@ -52,12 +52,12 @@ echo <<<_END
 
 <form class="readForm" action="read.php" method="post"><pre>
 	<h3>My Reading List</h3>
-	Id <input type="text" name="id">
-	Title <input type="text" name="title">
-	Author <input type="text" name="author">
-	Year <input type="text" name="year">
-	ISBN <input type="text" name="isbn">
-	<input type="submit" class="add" value="ADD RECORD"></pre>
+	Id 	<input type="text" name="id">
+	Title 	<input type="text" name="title">
+	Author 	<input type="text" name="author">
+	Year 	<input type="text" name="year">
+	ISBN 	<input type="text" name="isbn">
+			<input type="submit" class="add" value="ADD RECORD"></pre>
 </form>
 
 _END;
