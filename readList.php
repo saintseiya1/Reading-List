@@ -39,10 +39,12 @@ if (isset($_POST['id']) &&
 		}
 	}
 
-echo '<link rel="stylesheet" href="read.css" /> ';
+echo '<link rel="stylesheet" href="readList.css" /> ';
 
 function insertFail($insfail) {
-	echo "<script>alert(`$insfail\n`);</script>";
+
+	echo $insfail;
+	//echo "<script>alert(`$insfail\n`);</script>";
 };
 
 
@@ -50,7 +52,7 @@ function insertFail($insfail) {
 ////////////////////////////////////////////////////////////
 echo <<<_END
 
-<form class="readForm" action="read.php" method="post"><pre>
+<form class="readForm" action="readList.php" method="post"><pre>
 	<h3>My Reading List</h3>
 	Id 	<input type="text" name="id">
 	Title 	<input type="text" name="title">
@@ -85,7 +87,7 @@ echo <<<_END
 <tr><td>ID</td><td>Title</td><td>Author</td><td>Year</td><td>ISBN</td></tr>
 <tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td><td>$row[4]</td></tr>
 </table>
-	<form action="read.php" method="post">
+	<form action="readList.php" method="post">
 <input type="hidden" name="delete" value="yes">
 <input type="hidden" name="id" value="$row[0]">
 <input type="submit" class="delete" value="DELETE RECORD"></form>
