@@ -27,5 +27,10 @@
 		input {
 			cursor: pointer;
 		}
+		.readForm input {
+			margin: 1px;
+		}
+		.readForm input:active {
+			background: gray;
+		}
 	</style>
-
