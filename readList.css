@@ -30,7 +30,7 @@
 		.readForm input {
 			margin: 1px;
 		}
-		.readForm input:active {
-			background: gray;
+		.readForm input:focus {
+			background-color: lightyellow;
 		}
 	</style>
