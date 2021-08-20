@@ -64,6 +64,14 @@ echo <<<_END
 
 _END;
 ////////////////////////////////////////////////////////////
+echo <<<_END
+
+<form action="successList.php" method="post">
+<input type="hidden" name="save" value="yes">
+<input type="submit" class="save" value="SAVE INFO">
+</form>
+
+_END;
 
 
 
@@ -94,8 +102,6 @@ echo <<<_END
 
 _END;
 /////////////////////////////////////////////////////////////////////////////////////////
-
-
 }
 
 /*
