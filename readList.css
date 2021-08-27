@@ -5,7 +5,7 @@
 			box-sizing: border-box;
 		}
 		html {
-			background: linear-gradient(lightblue, dodgerblue, blue);
+			background: linear-gradient(lightblue, dodgerblue, blue, purple);
 			background-repeat: no-repeat;
 			color: white;
 		}
