@@ -1,6 +1,5 @@
 <?php
 
-if (isset($_POST['save'])) {
 echo <<<_END
 
 <!DOCTYPE html>
@@ -12,12 +11,10 @@ echo <<<_END
 <h1>
 	Save successful! This works!
 </h1>
+
 </body>
 </html>
 
 _END;
-} else {
-	echo "not working!";
-}
 
 ?>
