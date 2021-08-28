@@ -98,7 +98,7 @@ echo <<<_END
 	<form action="readList.php" method="post">
 <input type="hidden" name="delete" value="yes">
 <input type="hidden" name="id" value="$row[0]">
-<input type="submit" class="delete" value="DELETE RECORD"></form>
+<input type="submit" class="delete" value="     DELETE RECORD"></form>
 
 _END;
 /////////////////////////////////////////////////////////////////////////////////////////

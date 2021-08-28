@@ -21,8 +21,12 @@
 			color: white;
 		}
 		.delete {
-			background: red;
+			background-color: red;
 			color: white;
+				background: url('trash-can.jpg');
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+
 		}
 		input {
 			cursor: pointer;
@@ -33,4 +37,5 @@
 		.readForm input:focus {
 			background-color: lightyellow;
 		}
+
 	</style>
