@@ -20,12 +20,11 @@
 			background: green;
 			color: white;
 		}
-		.delete {
-			background-color: red;
+		.delete {			
 			color: white;
-				background: url('trash-can.jpg');
-	background-repeat: no-repeat;
-	background-size: 20px 20px;
+			background: url('trash-can.jpg');
+			background-repeat: no-repeat;
+			background-size: 20px 20px;
 
 		}
 		input {
@@ -37,5 +36,13 @@
 		.readForm input:focus {
 			background-color: lightyellow;
 		}
-
+		input[type="submit"] {
+			background-color: red;
+		}
+		input[type="submit"].add {
+			background-color: green;
+		}
+		input[type="submit"].save{
+			background-color: yellow;
+		}
 	</style>
