@@ -45,4 +45,13 @@
 		input[type="submit"].save{
 			background-color: yellow;
 		}
+		input[type="submit"]:hover {
+			background-color: tomato;
+		}
+		input[type="submit"].add:hover {
+			background-color: lightgreen;
+		}
+		input[type="submit"].save:hover {
+			background-color: lightyellow;
+		}
 	</style>
