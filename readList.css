@@ -33,8 +33,11 @@
 		.readForm input {
 			margin: 1px;
 		}
+		.readForm input:hover {
+			background: lightyellow;
+		}
 		.readForm input:focus {
-			background-color: lightyellow;
+			background-color: yellow;
 		}
 		input[type="submit"] {
 			background-color: red;
@@ -43,7 +46,8 @@
 			background-color: green;
 		}
 		input[type="submit"].save{
-			background-color: yellow;
+			background-color: black;
+			color: white;
 		}
 		input[type="submit"]:hover {
 			background-color: tomato;
@@ -52,6 +56,7 @@
 			background-color: lightgreen;
 		}
 		input[type="submit"].save:hover {
-			background-color: lightyellow;
+			background-color: gray;
+			color: white;
 		}
 	</style>
