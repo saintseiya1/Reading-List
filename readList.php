@@ -53,7 +53,7 @@ function insertFail($insfail) {
 echo <<<_END
 
 <form class="readForm" action="readList.php" method="post">
-	<pre><h3>My Reading List</h3>
+	<pre><h3 class="title">My Reading List</h3>
 	Id 	<input type="text" name="id">
 	Title 	<input type="text" name="title">
 	Author 	<input type="text" name="author">

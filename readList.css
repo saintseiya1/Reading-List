@@ -59,4 +59,8 @@
 			background-color: gray;
 			color: white;
 		}
+		.title:hover {
+			font-family: cursive;
+			color: black;
+		}
 	</style>
