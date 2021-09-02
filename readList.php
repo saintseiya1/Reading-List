@@ -1,9 +1,9 @@
 <?php
 
-	$dbhost = 'x';
-	$dbname = 'x';
-	$dbuser = 'x';
-	$dbpass = 'x';
+	$dbhost = 'localhost';
+	$dbname = 'read_list';
+	$dbuser = 'root';
+	$dbpass = 'root';
 
 	$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 	if ($connection->connect_error) die ($connection->connect_error);
@@ -47,9 +47,6 @@ function insertFail($insfail) {
 	//echo "<script>alert(`$insfail\n`);</script>";
 };
 
-
-
-////////////////////////////////////////////////////////////
 echo <<<_END
 
 <form class="readForm" action="readList.php" method="post">
@@ -63,16 +60,6 @@ echo <<<_END
 </form>
 
 _END;
-////////////////////////////////////////////////////////////
-echo <<<_END
-
-<form action="successList.php" method="post">
-<input type="hidden" name="save" value="yes">
-<input type="submit" class="save" value="SAVE INFO">
-</form>
-
-_END;
-
 
 
 $query = "SELECT * FROM list";
@@ -86,9 +73,6 @@ for ($j = 0; $j < $rows; ++$j)
 	$result->data_seek($j);
 	$row = $result->fetch_array(MYSQLI_NUM);
 
-
-
-/////////////////////////////////////////////////////////////////////////////////////////
 echo <<<_END
 
 <table>
@@ -101,16 +85,7 @@ echo <<<_END
 <input type="submit" class="delete" value="     DELETE RECORD"></form>
 
 _END;
-/////////////////////////////////////////////////////////////////////////////////////////
 }
-
-/*
-	Id $row[0];
-	Title $row[1];
-	Author $row[2];
-	Year $row[3];
-	ISBN $row[4];
-*/
 
 $result->close();
 $connection->close();
