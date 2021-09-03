@@ -76,13 +76,17 @@ for ($j = 0; $j < $rows; ++$j)
 echo <<<_END
 
 <table>
-<tr><td>ID</td><td>Title</td><td>Author</td><td>Year</td><td>ISBN</td></tr>
-<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td><td>$row[4]</td></tr>
-</table>
+<tr><td>ID</td><td>Title</td><td>Author</td><td>Year</td><td>ISBN</td><td>DEL</td></tr>
+<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td><td>$row[4]</td>
+<td>
 	<form action="readList.php" method="post">
 <input type="hidden" name="delete" value="yes">
 <input type="hidden" name="id" value="$row[0]">
 <input type="submit" class="delete" value="     DELETE RECORD"></form>
+</td>
+</tr>
+</table>
+
 
 _END;
 }
