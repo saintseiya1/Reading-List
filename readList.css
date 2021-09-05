@@ -41,23 +41,22 @@
 		}
 		input[type="submit"] {
 			background-color: red;
+			color: white;
 		}
 		input[type="submit"].add {
 			background-color: green;
-		}
-		input[type="submit"].save{
-			background-color: black;
 			color: white;
 		}
+
 		input[type="submit"]:hover {
-			background-color: tomato;
+			background-color: white;
+			color: red;
+
 		}
 		input[type="submit"].add:hover {
-			background-color: lightgreen;
+			background-color: white;
+			color: green;
 		}
-		input[type="submit"].save:hover {
-			background-color: gray;
-			color: white;
-		}
+
 
 	</style>
