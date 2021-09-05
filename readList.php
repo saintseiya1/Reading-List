@@ -34,7 +34,7 @@ if (isset($_POST['id']) &&
 		$myquery = "INSERT INTO list VALUES" ."('$id', '$title', '$author', '$year', '$isbn')";
 		$myresult = $connection->query($myquery);
 		if (!$myresult) {
-			$insertFailed = "INSERT failed: $myquery" . "\n" . $connection->error;
+			$insertFailed = "INSERT failed: $myquery" . "<br />" . $connection->error;
 			insertFail($insertFailed);
 		}
 	}
