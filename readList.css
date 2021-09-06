@@ -9,6 +9,11 @@
 			background-repeat: no-repeat;
 			color: white;
 		}
+		h3 {
+			color: gray;
+			font-family: cursive;
+			text-transform: uppercase;
+		}
 		table, th, td {
 			border: 2px solid gold;
 			border-collapse: collapse;

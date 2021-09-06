@@ -37,15 +37,13 @@ if (isset($_POST['id']) &&
 			$insertFailed = "INSERT failed: $myquery" . "<br />" . $connection->error;
 			insertFail($insertFailed);
 		}
-	}
+}
 
 echo '<link rel="stylesheet" href="readList.css" /> ';
 
 function insertFail($insfail) {
-
 	echo $insfail;
-	//echo "<script>alert(`$insfail\n`);</script>";
-};
+}
 
 echo <<<_END
 
