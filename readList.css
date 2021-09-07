@@ -11,6 +11,7 @@
 		}
 		h3 {
 			color: gray;
+			text-shadow: black 2px 2px 2px;
 			font-family: cursive;
 			text-transform: uppercase;
 		}
