@@ -42,6 +42,9 @@ if (isset($_POST['id']) &&
 echo '<link rel="stylesheet" href="readList.css" /> ';
 
 function insertFail($insfail) {
+	echo "<script>
+			alert('Please insert proper values');
+			</script>";
 	echo $insfail;
 }
 
