@@ -1,68 +1,65 @@
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		html {
-			background: linear-gradient(lightblue, dodgerblue, blue, purple);
-			background-repeat: no-repeat;
-			color: white;
-		}
-		h3 {
-			color: gray;
-			text-shadow: black 2px 2px 2px;
-			font-family: cursive;
-			text-transform: uppercase;
-		}
-		table, th, td {
-			border: 2px solid gold;
-			border-collapse: collapse;
-		}
-		th, td {
-		  padding: 5px;
-		}
-		.add {
-			background: green;
-			color: white;
-		}
-		.delete {			
-			color: white;
-			background: url('trash-can.jpg');
-			background-repeat: no-repeat;
-			background-size: 20px 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background: linear-gradient(lightblue, dodgerblue, blue, purple);
+  background-repeat: no-repeat;
+  color: white;
+}
+h3 {
+  color: gray;
+  text-shadow: black 2px 2px 2px;
+  font-family: cursive;
+  text-transform: uppercase;
+}
+table,
+th,
+td {
+  border: 2px solid gold;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 5px;
+}
+.add {
+  background: green;
+  color: white;
+}
+.delete {
+  color: white;
+  background: url("trash-can.jpg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+input {
+  cursor: pointer;
+}
+.readForm input {
+  margin: 1px;
+}
+.readForm input:hover {
+  background: lightyellow;
+}
+.readForm input:focus {
+  background-color: yellow;
+}
+input[type="submit"] {
+  background-color: red;
+  color: white;
+}
+input[type="submit"].add {
+  background-color: green;
+  color: white;
+}
 
-		}
-		input {
-			cursor: pointer;
-		}
-		.readForm input {
-			margin: 1px;
-		}
-		.readForm input:hover {
-			background: lightyellow;
-		}
-		.readForm input:focus {
-			background-color: yellow;
-		}
-		input[type="submit"] {
-			background-color: red;
-			color: white;
-		}
-		input[type="submit"].add {
-			background-color: green;
-			color: white;
-		}
-
-		input[type="submit"]:hover {
-			background-color: white;
-			color: red;
-
-		}
-		input[type="submit"].add:hover {
-			background-color: white;
-			color: green;
-		}
-
-
-	</style>
+input[type="submit"]:hover {
+  background-color: white;
+  color: red;
+}
+input[type="submit"].add:hover {
+  background-color: white;
+  color: green;
+}
