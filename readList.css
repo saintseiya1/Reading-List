@@ -18,19 +18,22 @@ h3 {
 table,
 th,
 td {
-  border: 2px solid gold;
+  border: 2px double gold;
   border-collapse: collapse;
 }
 th,
 td {
   padding: 5px;
 }
-.add {
-  background: green;
-  color: white;
-}
+.add,
 .delete {
   color: white;
+  padding: 2px;
+}
+.add {
+  background: green;
+}
+.delete {
   background: url("trash-can.jpg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
@@ -45,22 +48,22 @@ input {
   background: lightyellow;
 }
 .readForm input:focus {
-  background-color: yellow;
+  background-color: gold;
 }
 input[type="submit"] {
-  background-color: red;
-  color: white;
-}
-input[type="submit"].add {
-  background-color: green;
-  color: white;
-}
-
-input[type="submit"]:hover {
   background-color: white;
   color: red;
 }
-input[type="submit"].add:hover {
+input[type="submit"].add {
   background-color: white;
   color: green;
+}
+
+input[type="submit"]:hover {
+  background-color: red;
+  color: white;
+}
+input[type="submit"].add:hover {
+  background-color: green;
+  color: white;
 }
