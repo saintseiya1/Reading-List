@@ -1,9 +1,9 @@
 <?php
 
 	$dbhost = 'localhost';
-	$dbname = 'read_list';
 	$dbuser = 'root';
 	$dbpass = 'root';
+	$dbname = 'read_list';
 
 	$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 	if ($connection->connect_error) die ($connection->connect_error);
@@ -49,7 +49,6 @@ function insertFail($insfail) {
 }
 
 echo <<<_END
-
 <form class="readForm" action="readList.php" method="post">
 	<pre><h3 class="title">My Reading List</h3>
 	Id 	<input type="text" name="id">
@@ -63,7 +62,6 @@ echo <<<_END
 <tr><th>ID</th><th>Title</th><th>Author</th><th>Year</th><th>ISBN</th></tr>
 _END;
 
-
 $query = "SELECT * FROM list";
 $result = $connection->query($query);
 if (!$result) die ("Database access failed: " . $connection->error);
@@ -76,8 +74,6 @@ for ($j = 0; $j < $rows; ++$j)
 	$row = $result->fetch_array(MYSQLI_NUM);
 
 echo <<<_END
-
-
 <tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td><td>$row[4]</td>
 <td>
 	<form action="readList.php" method="post">
@@ -85,14 +81,10 @@ echo <<<_END
 <input type="hidden" name="id" value="$row[0]">
 <input type="submit" class="delete" value="     DELETE RECORD"></form>
 </td></tr>
-
-
-
 _END;
 }
 
 echo "</tbody></table>";
-
 
 $result->close();
 $connection->close();
