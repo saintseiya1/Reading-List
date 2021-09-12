@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 html {
+  padding-left: 20px;
   height: 650px;
   background: linear-gradient(lightblue, dodgerblue, darkblue);
   background-repeat: no-repeat;
