@@ -1,15 +1,40 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html {
+/*html {
   padding-left: 20px;
   height: 650px;
   background: linear-gradient(lightblue, dodgerblue, darkblue);
   background-repeat: no-repeat;
   color: white;
 }
+
+ background color animation */
+body {
+    color: white;
+  padding-left: 20px;
+  height: 650px;
+  background: linear-gradient(-45deg, lightblue, dodgerblue, blue, darkblue);
+  background-repeat: no-repeat;
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 h3 {
   color: gray;
   text-shadow: black 2px 2px 2px;
