@@ -51,6 +51,7 @@ function insertFail($insfail) {
 echo <<<_END
 <form class="readForm" action="readList.php" method="post">
 	<pre>
+	<img src="books.png" height="100" width="100" alt="books" />
 <h3 class="title">My Reading List</h3>
 Id 	<input type="text" name="id">
 Title 	<input type="text" name="title">
