@@ -17,7 +17,7 @@ body {
     color: white;
   padding-left: 20px;
   height: 650px;
-  background: linear-gradient(-45deg, lightblue, dodgerblue, blue, darkblue);
+  background: linear-gradient(-45deg, lightblue, dodgerblue, blue, darkblue, white);
   background-repeat: no-repeat;
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
@@ -92,4 +92,10 @@ input[type="submit"]:hover {
 input[type="submit"].add:hover {
   background-color: green;
   color: white;
+}
+
+img {
+  position: absolute;
+  top: 60px;
+  left: 350px;
 }
