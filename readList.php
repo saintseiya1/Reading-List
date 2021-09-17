@@ -49,6 +49,9 @@ function insertFail($insfail) {
 }
 
 echo <<<_END
+<div id="header">
+<span> RHJ DESIGN </span>
+</div>
 <form class="readForm" action="readList.php" method="post">
 	<pre>
 	<img src="books.png" height="100" width="100" alt="books" />
