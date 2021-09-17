@@ -1,23 +1,14 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/*html {
-  padding-left: 20px;
-  height: 650px;
-  background: linear-gradient(lightblue, dodgerblue, darkblue);
-  background-repeat: no-repeat;
-  color: white;
-}
 
- background color animation */
 body {
-    color: white;
+  color: white;
   padding-left: 20px;
   height: 650px;
-  background: linear-gradient(-45deg, lightblue, dodgerblue, blue, darkblue, white);
+  background: linear-gradient(-45deg, lightblue, dodgerblue, darkblue, blue, white);
   background-repeat: no-repeat;
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
@@ -98,4 +89,11 @@ img {
   position: absolute;
   top: 60px;
   left: 350px;
+}
+
+#header {
+  width: 500px;
+  height: 100px;
+  background-color: black;
+  color: white;
 }
