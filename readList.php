@@ -91,6 +91,7 @@ _END;
 }
 
 echo "</tbody></table>";
+echo "<div id='footer'>&copy; 2021</div>";
 
 $result->close();
 $connection->close();

@@ -91,9 +91,11 @@ img {
   left: 300px;
 }
 
-#header {
-  padding-left: -20px;
+#header, #footer {
+  text-align: center;
+  font-size: 150%;
   height: 50px;
-  background-color: black;
-  color: white;
+  padding-top: 10px;
+  background-color: green;
+  color: #eee;
 }
