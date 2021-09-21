@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 
-body {
+main {
   color: white;
   padding-left: 20px;
-  height: 650px;
+  height: 500px;
   background: linear-gradient(-45deg, lightblue, dodgerblue, darkblue, blue, white);
   background-repeat: no-repeat;
   background-size: 400% 400%;
