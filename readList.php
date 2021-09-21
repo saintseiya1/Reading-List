@@ -52,6 +52,7 @@ echo <<<_END
 <div id="header">
 <span> RHJ DESIGN </span>
 </div>
+<main>
 <form class="readForm" action="readList.php" method="post">
 	<pre>
 <h3 class="title">My Reading List</h3>
@@ -91,6 +92,7 @@ _END;
 }
 
 echo "</tbody></table>";
+echo "</main>";
 echo "<div id='footer'>&copy; 2021</div>";
 
 $result->close();
