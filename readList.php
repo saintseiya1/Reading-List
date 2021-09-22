@@ -61,7 +61,7 @@ Title 	<input type="text" name="title">
 Author 	<input type="text" name="author">
 Year 	<input type="text" name="year">
 ISBN 	<input type="text" name="isbn">
-	<input type="submit" class="add" value="ADD RECORD">
+	<input type="submit" class="add" value="&plus; ADD RECORD">
 		<img src="books.png" height="100" width="100" alt="books" />
 </pre>
 </form>
